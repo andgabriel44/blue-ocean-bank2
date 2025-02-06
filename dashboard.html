@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Blue Ocean Offshore Bank</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px 40px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .navbar ul li {
+      margin-left: 20px;
+    }
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .btn-logout {
+      background: #e60000;
+      border: none;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .container {
+      padding: 40px;
+    }
+    .overview {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .overview h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .overview p {
+      font-size: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #003366;
+      color: #fff;
+    }
+    .transfer-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+    .transfer-form input[type="text"],
+    .transfer-form input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .transfer-form input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #003366;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .transfer-form input[type="submit"]:hover {
+      background: #002244;
+    }
+    footer {
+      background: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>Blue Ocean Offshore Bank</h1>
+      <ul>
+        <!-- Home now links to the dashboard page -->
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a class="btn-logout" href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="container">
+    <div class="overview">
+      <h2>Account Overview</h2>
+      <!-- Displaying the account holder's name -->
+      <p><strong>Account Holder:</strong> Mark Anderson</p>
+      <p><strong>Current Balance:</strong> $25,000,650</p>
+    </div>
+    
+    <h3 id="transactions">Transaction History - Payments Received</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 20 detailed transactions -->
+        <tr>
+          <td>2017-01-10</td>
+          <td>Initial design consultation for Project Alpha (USA)</td>
+          <td>$1,200,000</td>
+        </tr>
+        <tr>
+          <td>2017-02-15</td>
+          <td>Site survey and analysis for Project Anatolia (Turkey)</td>
+          <td>$900,000</td>
+        </tr>
+        <tr>
+          <td>2017-03-20</td>
+          <td>Engineering design services for Project Vanguard (USA)</td>
+          <td>$1,100,000</td>
+        </tr>
+        <tr>
+          <td>2017-04-25</td>
+          <td>Procurement of construction materials for Project Bosphorus (Turkey)</td>
+          <td>$1,400,000</td>
+        </tr>
+        <tr>
+          <td>2017-06-05</td>
+          <td>Structural planning consultation for Project Horizon (USA)</td>
+          <td>$800,000</td>
+        </tr>
+        <tr>
+          <td>2017-07-10</td>
+          <td>On-site project evaluation for Project Marmara (Turkey)</td>
+          <td>$1,300,000</td>
+        </tr>
+        <tr>
+          <td>2018-01-15</td>
+          <td>Project management services for Project Skyline (USA)</td>
+          <td>$1,000,000</td>
+        </tr>
+        <tr>
+          <td>2018-03-10</td>
+          <td>Final design review for Project Cappadocia (Turkey)</td>
+          <td>$1,200,000</td>
+        </tr>
+        <tr>
+          <td>2018-05-20</td>
+          <td>Budget planning and consultation for Project Liberty (USA)</td>
+          <td>$900,000</td>
+        </tr>
+        <tr>
+          <td>2018-08-15</td>
+          <td>Quality control inspection for Project Ephesus (Turkey)</td>
+          <td>$1,800,000</td>
+        </tr>
+        <tr>
+          <td>2019-02-12</td>
+          <td>Structural integrity assessment for Project Orion (USA)</td>
+          <td>$1,700,000</td>
+        </tr>
+        <tr>
+          <td>2019-05-18</td>
+          <td>Procurement and logistics for Project Troy (Turkey)</td>
+          <td>$1,000,000</td>
+        </tr>
+        <tr>
+          <td>2019-07-22</td>
+          <td>Advanced engineering design for Project Atlas (USA)</td>
+          <td>$1,400,000</td>
+        </tr>
+        <tr>
+          <td>2019-09-30</td>
+          <td>Environmental impact analysis for Project Pergamon (Turkey)</td>
+          <td>$1,100,000</td>
+        </tr>
+        <tr>
+          <td>2020-01-05</td>
+          <td>Construction oversight for Project Liberty II (USA)</td>
+          <td>$900,000</td>
+        </tr>
+        <tr>
+          <td>2020-04-10</td>
+          <td>Technical consulting for Project Byzantium (Turkey)</td>
+          <td>$1,800,000</td>
+        </tr>
+        <tr>
+          <td>2020-08-25</td>
+          <td>Safety inspection for Project Freedom (USA)</td>
+          <td>$1,500,000</td>
+        </tr>
+        <tr>
+          <td>2021-03-15</td>
+          <td>Sustainability audit for Project Anatolia II (Turkey)</td>
+          <td>$2,400,000</td>
+        </tr>
+        <tr>
+          <td>2021-07-30</td>
+          <td>Digital integration planning for Project Horizon II (USA)</td>
+          <td>$1,200,000</td>
+        </tr>
+        <tr>
+          <td>2022-12-15</td>
+          <td>Final certification and project wrap-up for Project Cappadocia II (Turkey)</td>
+          <td>$400,650</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3 id="support">Make a Transfer</h3>
+    <div class="transfer-form">
+      <form id="transferForm">
+        <label for="recipient">Recipient Account:</label>
+        <input type="text" id="recipient" placeholder="Enter recipient account" required>
+        <label for="transferAmount">Amount:</label>
+        <input type="number" id="transferAmount" placeholder="Enter amount" required>
+        <input type="submit" value="Transfer">
+      </form>
+      <p id="transferMessage" style="color: red; text-align: center;"></p>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 Blue Ocean Offshore Bank | 123 Ocean Drive, Suite 456 | Phone: (123) 456-7890</p>
+  </footer>
+  <script>
+    document.getElementById('transferForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('transferMessage').textContent = "Transfers are currently disabled due to restrictions.";
+    });
+  </script>
+</body>
+</html>
