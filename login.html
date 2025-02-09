@@ -6,7 +6,7 @@
   <title>Login - Blue Ocean Offshore Bank</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <style>
-    /* Login page with subtle patterned gradient background */
+    /* Login page with a subtle patterned gradient background */
     body {
       margin: 0;
       padding: 0;
@@ -64,7 +64,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-    .login-container input[type="submit"] {
+    .login-container button {
       width: 100%;
       padding: 12px;
       background: #003366;
@@ -75,7 +75,7 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    .login-container input[type="submit"]:hover {
+    .login-container button:hover {
       background: #002244;
     }
     .error {
@@ -113,7 +113,8 @@
     <form id="loginForm">
       <input type="text" id="username" placeholder="Username" required>
       <input type="password" id="password" placeholder="Password" required>
-      <input type="submit" value="Login">
+      <!-- Using a button to trigger login -->
+      <button type="button" onclick="handleLogin()">Login</button>
     </form>
     <p id="errorMessage" class="error"></p>
   </div>
@@ -123,23 +124,21 @@
   </footer>
   
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
+    function handleLogin() {
       // Get values and trim extra spaces
       var username = document.getElementById('username').value.trim();
       var password = document.getElementById('password').value.trim();
       
-      // Debug: Log the values (remove or comment out in production)
+      // Debug: Log the values (you may remove this in production)
       console.log("Username:", username, "Password:", password);
       
       // Check credentials (case sensitive)
-      if(username === 'admin' && password === 'goodgod@A1'){
+      if (username === 'admin' && password === 'goodgod@A1') {
         window.location.href = "dashboard.html";
       } else {
         document.getElementById('errorMessage').textContent = "Invalid username or password.";
       }
-    });
+    }
   </script>
 </body>
 </html>
